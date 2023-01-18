@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Page Academia - VideoAula</title>
+    <title>Page Academia </title>
 </head>
 <body>
     <header>
@@ -23,16 +23,19 @@
             <h1 class="logo"> Academia FG</h1>
             <nav class="header-menu">
                 <ul class="list-itens">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">serviços</a></li>
-                    <li><a href="#">aulas</a></li>
+                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "Cadastre-se", signup_path %></li>
+                    <li><%= link_to "Planos", planos_path %></li>
+                    <li><%= link_to "Aulas", "/aula"%></li>
+                    <li><%= link_to "Sobre", about_path %></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <% if request.path == root_path %>
     <main>
         <div class="main-content">
-            <h1 class="primary-text">Malhar não fica mais fácil, você que fica melhor!</h1>
+            <h1 class="primary-text">Treinar não fica mais fácil, você que fica melhor!</h1>
             <h2 class="second-text">SE INSCREVA AGORA E MUDE DE VIDA</h2>
             <div class="btns">
                 <button class="btn-exp">Agendar aula experimental</button>
@@ -41,6 +44,8 @@
             </div>
         </div>
     </main>
+    <% end %>
+    <%= yield %>
 </body>
 </html>
 
