@@ -1,0 +1,23 @@
+<%provide(:title, 'Aulas') %>
+
+<div>
+<h1> CONHEÇA NOSSAS AULAS!</h1>
+</div>
+<hr>
+
+<%= link_to  do %>
+<div class="btns">
+
+<%= image_tag("aulas/musculacao", class: "photo", width: "250", height: "300") %>
+
+<%= image_tag("aulas/body_combat", class: "photo", width: "250", height: "300") %>
+
+<%= image_tag("aulas/fit", class: "photo", width: "250", height: "300") %>
+
+
+</div>
+<% end %>
+</body>
+</html>
+<%= link_to_prev_page @aulas, 'Previous Page' %>
+<%= link_to_next_page @aulas, 'Next Page' %>

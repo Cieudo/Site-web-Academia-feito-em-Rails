@@ -12,6 +12,12 @@ gem "jquery-rails"
 
 gem "devise"
 
+gem "activeadmin"
+
+gem "kaminari"
+
+gem "prawn"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

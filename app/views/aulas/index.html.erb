@@ -1,0 +1,14 @@
+<%provide(:title, 'Testando') %>
+
+<div>
+	<p><%= flash[:notice] %></p>
+	
+	<%= @aulas.each do |aula| %>
+		<div>
+			<%= image_tag aula.image_Url %>
+			<h3> <%= aula.nome %> </h3>
+			<p>	<%= aula.description %> </p>
+
+		</div>
+	<% end %>
+</div>

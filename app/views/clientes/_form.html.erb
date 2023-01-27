@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+
+
+    <%= form_with(model: cliente) do |form| %>
+  <% if cliente.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+        <% cliente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  </div>
+
+
+
+  <div class="main-content">
+
+    <%= image_tag("logo/logotipo_", class: "photo", width: "250", height: "250") %>
+
+  <div class="col-sm-offset-2 col-sm-10">
+     <%= form.text_field :nome, placeholder: "Informe o seu Nome", class: "form-control row" %>
+  </div>
+
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= form.number_field :idade, placeholder: "Digite sua idade", class: "form-control row" %>
+  </div>
+
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= form.number_field :cpf, placeholder: "Digite seu CPF", class: "form-control row" %>
+  </div>
+
+<div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+        <%= form.submit "Cadastrar", class:"btn btn-primary" %>
+</div>
+    <div class="col-sm-offset-2 col-sm-10">
+        <%= link_to "Back to clientes", clientes_path, class: "btn btn-secondary" %>
+    </div>
+</div>
+
+<% end %>
+<form>
+</div>
+
+

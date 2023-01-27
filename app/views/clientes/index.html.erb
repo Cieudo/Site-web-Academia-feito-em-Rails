@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clientes</h1>
+
+<div id="clientes">
+  <% @clientes.each do |cliente| %>
+    <%= render cliente %>
+      <%= link_to "Ver cliente", cliente, class: "back-button" %>
+  <% end %>
+</div>

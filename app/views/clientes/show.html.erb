@@ -1,0 +1,12 @@
+<p class="success-notice"> <%= notice %> </p>
+
+<div class="client-info">
+  <%= render @cliente %>
+</div>
+
+<div class="buttons-container">
+  <button class="edit-button" onClick="location.href='<%= edit_cliente_path(@cliente) %>'">Editar cliente</button>
+  <button class="back-button" onClick="location.href='<%=clientes_path%>'">Voltar para clientes</button>
+  <button class="delete-button" onClick="location.href='<%= cliente_path(@cliente) %>', {method: :delete}">Excluir cliente</button>
+</div>
+

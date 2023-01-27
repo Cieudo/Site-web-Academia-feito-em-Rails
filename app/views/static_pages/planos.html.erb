@@ -1,1 +1,15 @@
-<h1>Tela de Planos</h1>
+<%provide(:title, 'Planos') %>
+<div>
+<h1> CONHEÇA NOSSOS PLANOS!</h1>
+</div>
+<hr>
+
+<%= link_to "/clientes/new" do %>
+  
+  <div class="btns">
+
+  <%= image_tag("planos/plano_light", class: "photo") %>
+
+  <%= image_tag("planos/plano_plus", class: "photo") %>
+  </div>
+<% end %>

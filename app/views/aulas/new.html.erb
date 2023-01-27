@@ -1,0 +1,23 @@
+<%= form_with(model: @aula) do |f| %>
+	<div>
+		<%= f.label :nome, "Nome" %>
+		<%= f.text_field :nome, class:"" %> 
+	</div>
+
+	<div>
+		<%= f.label :image_url, "Imagem url" %>
+		<%= f.text_field :image_url, class:"",placeholder:"http://" %> 
+	</div>
+
+	<div>
+		<%= f.label :description, "Descrição" %>
+		<%= f.text_area :description, class:"" %> 
+	</div>
+
+	<%= f.submit "Salvar" %>
+
+
+<% end %>
+
+
+
