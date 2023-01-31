@@ -9,14 +9,12 @@ Rails.application.routes.draw do
   get '/users', to: "controllers#index"
 
   get 'planos'   =>  'static_pages#planos'
-  get 'home'    =>  'static_pages#home'
+  get 'home'     =>  'static_pages#home'
   get 'about'    =>  'static_pages#about'
 
   resource :aulas
   get '/aulas', to: "aulas#index"
   get '/aulas/new', to: "aulas#new"
   #post '/aulas/create', to "aulas#create"
-
-  
 
 end

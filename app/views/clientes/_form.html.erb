@@ -27,8 +27,6 @@
   <div>
   </div>
 
-
-
   <div class="main-content">
 
     <%= image_tag("logo/logotipo_", class: "photo", width: "250", height: "250") %>
@@ -45,15 +43,15 @@
     <%= form.number_field :cpf, placeholder: "Digite seu CPF", class: "form-control row" %>
   </div>
 
-<div class="form-group row">
-    <div class="col-sm-offset-2 col-sm-10">
-        <%= form.submit "Cadastrar", class:"btn btn-primary" %>
-</div>
-    <div class="col-sm-offset-2 col-sm-10">
-        <%= link_to "Back to clientes", clientes_path, class: "btn btn-secondary" %>
-    </div>
-</div>
+   <div class="field">
+    <%= form.label :planos %>
+    <%= form.select :planos, options_for_select([["Plano Plus", "plus"], ["Plano Light", "light"]]) %>
+  </div>
 
+  <div class="actions">
+    <%= form.submit "Cadastrar", class: "btn btn-primary" %>
+    <%= link_to "Back to clientes", clientes_path, class: "btn btn-secondary" %>
+  </div>
 <% end %>
 <form>
 </div>

@@ -10,7 +10,7 @@ ActiveAdmin.register Cliente do
   # or
   #
    permit_params do
-     permitted = [:nome, :idade, :cpf]
+     permitted = [:nome, :idade, :planos, :cpf]
     permitted << :other if params[:action] == 'create' && current_user.admin?
      permitted
   end
