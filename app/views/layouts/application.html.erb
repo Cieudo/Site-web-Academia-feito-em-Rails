@@ -26,8 +26,6 @@
                 <ul class="list-itens">
                     <li><%= link_to "Home", root_path %></li>
                     <li><%= link_to "Planos", planos_path %></li>
-                    <li><%= link_to "Aulas", aulas_path %></li>
-                    <li><%= link_to "Cadastre-se", "/clientes/new"%></li>
                     <li><%= link_to "Admin", "/admin" %></li>
                 </ul>
             </nav>
@@ -39,9 +37,9 @@
             <h1 class="primary-text">Treinar não fica mais fácil, você que fica melhor!</h1>
             <h2 class="second-text">SE INSCREVA AGORA E MUDE DE VIDA</h2>
             <div class="btns">
-                <button class="btn-exp">Agendar aula experimental</button>
-                <button class="btn-personal">contactar personal Trainer</button>
-                <button class="btn-aulas">Aulas e Treinos exclusivos</button>
+                <%= link_to "Cadastre-se", "/clientes/new", class: "btn-personal" %>
+                <%= link_to 'Aulas e Treinos exclusivos', aulas_path, class: "btn-personal" %>
+
             </div>
         </div>
     </main>
